@@ -15,7 +15,14 @@
 <body>
   <div id="app">
     {{ message }}
+    <md-radio v-model="radio" :value="false">Boolean</md-radio>
+    <md-radio v-model="radio" value="my-radio">String</md-radio>
+    <md-radio v-model="radio" :value="objA">Object A</md-radio>
+    <md-radio v-model="radio" :value="objB">Object B</md-radio>
+    <md-radio v-model="radio">No Value</md-radio>
+    <md-radio v-model="radio" disabled>Disabled</md-radio>
   </div>
+  
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   <script src="https://unpkg.com/vue"></script>
   <script src="https://unpkg.com/vue-material"></script>
@@ -25,7 +32,15 @@
     var app = new Vue({
       el: '#app',
       data: {
-        message: 'Hello Vue!'
+        message: 'Hello Vue!',
+        objA: {
+          name: 'a'
+        },
+        objB: {
+          name: 'b'
+        },
+        // クリックで他の場所がフォルスに
+        radio: false
       }
     })
 
