@@ -11,7 +11,7 @@
       売り切れです
     </div>
     <div v-else>
-      {{ price }}円
+      {{ price | test() }}円
     </div>
   </div>
   <script src="https://jp.vuejs.org/js/vue.js"></script>
