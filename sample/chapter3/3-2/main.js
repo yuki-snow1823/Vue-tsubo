@@ -1,3 +1,4 @@
+// 大変：配列作ってそこに入れておく、条件全部書く
 // コンポーネントのルートノード
 var nodeApp = document.querySelector('#app');
 
