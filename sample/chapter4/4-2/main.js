@@ -2,6 +2,7 @@ var btnLoad = document.querySelector('#load');
 // 読み込みボタンのクリックイベントハンドラを定義
 btnLoad.addEventListener('click', function(event) {
   //【手順1】XMLHttpRequestオブジェクトのインスタンスを生成
+  // テストができるようになる
   var xmlHttpRequest  = new XMLHttpRequest();
   //【手順2】通信状態の変化を監視するイベントハンドラを設定
   xmlHttpRequest.onreadystatechange = function() {
@@ -12,6 +13,7 @@ btnLoad.addEventListener('click', function(event) {
       // 商品リストの子ノードを全て削除する
       var result  = document.querySelector('#result');
       result.textContent = '';
+
       // 商品の子ノードをDOMに挿入する
       for (var i=0; i<products.length; i++) {
         var text = '商品ID:' + products[i].id;
@@ -26,6 +28,7 @@ btnLoad.addEventListener('click', function(event) {
       }
     }
   };
+  
   //【手順3】レスポンスの形式を指定する
   xmlHttpRequest.responseType = 'json';
   //【手順4】リクエストメソッドと読み込むファイルのパスを指定する
