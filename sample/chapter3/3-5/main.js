@@ -14,6 +14,7 @@ var app = new Vue({
     sortOrder: 1,
     // 商品リスト
     products: [
+      // idがkeyになっているから繰り返しの時に問題が起こらない
       { id: 1, name: 'Michael<br>スマホケース', price: 1580, image: 'images/01.jpg', delv: 0, isSale: true },
       { id: 2, name: 'Raphael<br>スマホケース', price: 1580, image: 'images/02.jpg', delv: 0, isSale: true },
       { id: 3, name: 'Gabriel<br>スマホケース', price: 1580, image: 'images/03.jpg', delv: 240, isSale: true },
