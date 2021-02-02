@@ -7,12 +7,12 @@
 </head>
 <body>
   <div id="app">
-    <div v-if="stock == 0">
-      売り切れです
+    <div v-if="stock >= 1">
+      残り{{ stock }}個
+      {{ price }}
     </div>
-    <div v-else>
-      {{ price | test() }}円
-    </div>
+    <button @click="onDeleteItem"></button>
+    <div>{{ price }}</div>
   </div>
   <script src="https://jp.vuejs.org/js/vue.js"></script>
   <script src="main.js"></script>
