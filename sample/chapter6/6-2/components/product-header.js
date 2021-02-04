@@ -35,3 +35,5 @@ var productHeader = {
   </header>`,
   props: ['count', 'showSaleItem', 'showDelvFree', 'sortOrder']
 };
+
+// $emit(と言う名前として, の値を送る)と言うイメージ
