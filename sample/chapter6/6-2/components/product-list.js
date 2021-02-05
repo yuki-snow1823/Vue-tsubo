@@ -31,11 +31,13 @@ Vue.component('product-list', {
       //「送料無料」のチェック状態（true：チェック有り、false：チェック無し）
       showDelvFree: false,
       //「並び替え」の選択値（1：標準、2：価格が安い順）
+      // ここで初期値を設定
       sortOrder: 1
     }
   },
   methods: {
     // 「並び替え」の選択値が変わったとき呼び出されるメソッド
+    // 子から呼ばれる
     sortOrderChanged: function(order) {
       // 現在の選択値を新しい選択値で上書きする
       this.sortOrder = order;
